@@ -1,22 +1,22 @@
-﻿// Create a 3 points the symbols and enter the screen 
-int x1 = 5;
-int y1 = 5;
-char sym1 = '$';
-Draw(x1, y1, sym1);
+﻿// Create a 3 points the symbols and enter the screen
+using little_snake;
 
-int x2 = 10;
-int y2 = 5;
-char sym2 = '*';
-Draw(x2, y2, sym2);
+Point p1 = new Point();
+p1.x = 5;
+p1.y = 5;
+p1.sym = '$';
+p1.Draw();
 
-int x3 = 15;
-int y3 = 5;
-char sym3 = '@';
-Draw(x3, y3, sym3);
+Point p2 = new Point();
+p2.x = 10;
+p2.y = 5;
+p2.sym = '*';
+p2.Draw();
 
-// Creating a method that will output characters 
-static void Draw(int x, int y, char sym)
-{
-    Console.SetCursorPosition(x, y);
-    Console.WriteLine(sym);
-}
+Point p3 = new Point();
+p3.x = 15;
+p3.y = 5;
+p3.sym = '@';
+p3.Draw();
+
+

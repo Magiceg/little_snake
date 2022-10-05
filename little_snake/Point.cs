@@ -28,6 +28,6 @@ namespace little_snake
         {
             Console.SetCursorPosition(x, y);
             Console.WriteLine(sym);
-        }
+        }  
     }
 }

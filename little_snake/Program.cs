@@ -1,13 +1,30 @@
-﻿// Create a 3 points the symbols and enter the screen
-using little_snake;
-//shortened the code and hid information about how the dot works in the class
-Point p1 = new Point(5, 5, '$');
-p1.Draw();
+﻿using little_snake;
+//box
 
-Point p2 = new Point(10, 5, '*');
-p2.Draw();
+//drawing the frame 
+HorizontalLine upLine = new HorizontalLine(0, 98, 0, '#');
+HorizontalLine downLine = new HorizontalLine(0, 98, 29, '#');
+VerticalLine leftLine = new VerticalLine(0, 29, 0, '#');
+VerticalLine rightLine = new VerticalLine(0, 29, 98, '#');
+upLine.Drow();
+downLine.Drow();
+leftLine.Drow();
+rightLine.Drow();
 
-Point p3 = new Point(15, 5, '@');
-p3.Draw();
+
+
+//HorizontalLine line1 = new HorizontalLine(15, 30, 1, '$');
+//line1.Drow();
+Point p = new Point(4, 5, '&');
+p.Draw();
+
+
+VerticalLine line2 = new VerticalLine(6, 14, 20, '+');
+line2.Drow();
+
+
+Console.ReadLine();
+
+
 
 

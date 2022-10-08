@@ -7,13 +7,10 @@ using System.Threading.Tasks;
 
 namespace little_snake
 {
-    internal class HorizontalLine
+    class HorizontalLine : Figure
     {
         //creating a horizontal line symbols using a list and loop,
         //than enter the data int the main program 
-       
-        List<Point> points;
-
         public HorizontalLine(int xleft, int xright, int y, char sym)
         {
             points = new List<Point>();
@@ -25,12 +22,6 @@ namespace little_snake
 
         }
 
-        public void Drow()
-        {
-            foreach (Point p in points)
-            {
-                p.Draw();
-            }
-        }
+        
     }
 }

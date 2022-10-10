@@ -35,16 +35,22 @@ namespace little_snake
             }
             else if (direction == Direction.Left)
             {
-                x = x + shift;
+                x = x  - shift;
             }
             else if (direction == Direction.Up)
             {
-                y = y + shift;
+                y = y - shift;
             }
             else if (direction == Direction.Down)
             {
-                y = y - shift;
+                y = y + shift;
             }
+        }
+
+        public void Clear()  // deleting the previous point
+        {
+            sym = ' ';
+            Draw();
         }
 
         //hiding the method inside the class

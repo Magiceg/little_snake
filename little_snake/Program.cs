@@ -23,13 +23,24 @@ rightLine.Drow();
 
 
 //drawing the point 
-Point p = new Point(7, 10, '}');
-Snake snake = new Snake(p, 5, Direction.Right);
+Point p = new Point(7, 10, '*');
+Snake snake = new Snake(p, 7, Direction.Right);
 snake.Drow();
 
+Console.CursorVisible = false;
+//to control the snake, creating infinity loop 
+while(true)
+{
+    if(Console.KeyAvailable) //checking for keystrokesfrom the cycle
+    {
+        ConsoleKeyInfo key = Console.ReadKey(true);
+        snake.Control(key.Key);
+    }
+    Thread.Sleep(50);
+    snake.Move();
+}
 
 
-Console.ReadLine();
 
 
 

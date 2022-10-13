@@ -9,7 +9,7 @@ namespace little_snake
 {
     class Figure
     {
-        protected List<Point> points;
+        protected internal List<Point> points;
         public void Drow()
         {
             foreach (Point p in points)

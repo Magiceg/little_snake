@@ -47,6 +47,11 @@ namespace little_snake
             }
         }
 
+        public bool IsHit(Point p)  //intersection of the coordinats of the current
+        {                             //point with the point for food
+            return p.x == this.x && p.y == this.y;
+        }
+
         public void Clear()  // deleting the previous point
         {
             sym = ' ';
@@ -56,6 +61,7 @@ namespace little_snake
         //hiding the method inside the class
         public void Draw()
         {
+            
             Console.SetCursorPosition(x, y);
             Console.WriteLine(sym);
         }

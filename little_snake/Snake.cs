@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -60,5 +61,21 @@ namespace little_snake
                 direction = Direction.Down;
         }
 
+        internal bool Eat(Point food)
+        {
+            Point head = GetNextPoint();    //finding the snake in the next moment 
+            if (head.IsHit(food))   //if the point matches, a loop is started
+            {
+                food.sym = head.sym;    //food = head and add in the body snake 
+                points.Add(head);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+                
+
+        }
     }
 }
